@@ -1,0 +1,45 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Update this to match js/config.js `adminEmail` if you ever change it.
+    function isAdmin() {
+      return request.auth != null && request.auth.token.email == 'tak.sobr@gmail.com';
+    }
+
+    // Works: public can read published works only; admin can read/write everything.
+    match /works/{workId} {
+      allow read: if resource.data.published == true || isAdmin();
+      allow create: if isAdmin();
+      allow update, delete: if isAdmin();
+    }
+
+    // Profile, skills, socials: readable by anyone (public site content),
+    // writable only by the admin.
+    match /profiles/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /skills/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /socials/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /settings/{docId} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Deny everything else by default.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

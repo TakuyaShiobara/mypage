@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="hero image placeholder">
+  <rect width="800" height="600" fill="#F9FAFB"/>
+  <g stroke="#2563EB" stroke-width="4" fill="none" opacity="0.6">
+    <rect x="230" y="230" width="340" height="210" rx="14"/>
+    <path d="M300 440 L300 470 L500 470 L500 440"/>
+    <line x1="270" y1="270" x2="530" y2="270"/>
+    <line x1="270" y1="300" x2="470" y2="300"/>
+    <line x1="270" y1="330" x2="500" y2="330"/>
+    <line x1="270" y1="360" x2="420" y2="360"/>
+  </g>
+  <g fill="#2563EB" opacity="0.15">
+    <circle cx="180" cy="150" r="60"/>
+    <circle cx="640" cy="470" r="90"/>
+  </g>
+</svg>

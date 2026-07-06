@@ -1,0 +1,13 @@
+# Local secrets (Firebase web config + EmailJS keys)
+js/config.js
+
+# Firebase local tooling
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+.firebaserc.local
+
+# OS / editor
+.DS_Store
+*.swp

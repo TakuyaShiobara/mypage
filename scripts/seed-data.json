@@ -1,0 +1,97 @@
+{
+  "profile": {
+    "name": "Takaya Shiobara",
+    "title": "IT Engineer / AI Developer",
+    "tagline": "技術で、働き方を\nもっと自由に。",
+    "description": "業務改善・AI活用・Webアプリ開発を通して、効率的で価値ある仕組みづくりを目指しています。",
+    "bio": "IT企業でシステム開発と業務改善に従事。生成AIやクラウドを活用し、現場の課題を仕組み化することを得意としています。",
+    "career": [
+      { "period": "2022.04 - 現在", "title": "IT Engineer", "description": "業務システムの開発・保守、社内業務のDX推進を担当。" },
+      { "period": "2020.04 - 2022.03", "title": "情報系専門学校 卒業", "description": "Webアプリ開発・ネットワークの基礎を学ぶ。" }
+    ],
+    "strengths": ["業務改善", "生成AI活用", "Webアプリ開発", "クラウド構築"],
+    "futureGoals": "AIを活用したプロダクト開発と、非エンジニアでも使える業務改善ツールの提供に挑戦していきたいです。"
+  },
+  "socials": {
+    "github": "https://github.com/",
+    "note": "https://note.com/",
+    "x": "https://x.com/",
+    "linkedin": "https://www.linkedin.com/",
+    "youtube": "https://www.youtube.com/",
+    "email": "tak.sobr@gmail.com"
+  },
+  "skills": [
+    { "category": "Frontend", "order": 0, "items": ["HTML", "CSS", "JavaScript", "React"] },
+    { "category": "Backend", "order": 1, "items": ["Node.js", "Python", "Firebase Functions"] },
+    { "category": "Cloud", "order": 2, "items": ["Firebase", "Azure", "GCP"] },
+    { "category": "Microsoft", "order": 3, "items": ["Power Automate", "Power BI", "Excel VBA"] },
+    { "category": "AI", "order": 4, "items": ["Gemini API", "OpenAI API", "プロンプト設計"] },
+    { "category": "Design", "order": 5, "items": ["Figma", "UI/UX設計"] }
+  ],
+  "works": [
+    {
+      "title": "学習管理アプリ",
+      "category": "アプリ",
+      "summary": "PWAで学習の記録・振り返り・分析をサポートするアプリ",
+      "description": "日々の学習内容を記録し、振り返りやすくするPWAアプリです。",
+      "background": "自身の資格学習の記録を一元管理したいという課題から着想しました。",
+      "effort": "オフラインでも使えるようPWA化し、Gemini APIで学習内容の要約・アドバイスを行えるようにしました。",
+      "techStack": ["PWA", "Firebase", "Gemini API"],
+      "tags": ["学習", "PWA", "AI"],
+      "github": "",
+      "liveUrl": "",
+      "docUrl": "",
+      "thumbnailUrl": "",
+      "order": 0,
+      "published": true
+    },
+    {
+      "title": "家計管理アプリ",
+      "category": "アプリ",
+      "summary": "収入・支出の管理と可視化を行うシンプルな家計簿アプリ",
+      "description": "毎月の収支をシンプルに記録・可視化する家計簿アプリです。",
+      "background": "既存の家計簿アプリが多機能すぎたため、必要最低限の機能に絞ったものを作りました。",
+      "effort": "グラフ表示と月次サマリーで、使いやすさを重視して設計しました。",
+      "techStack": ["PWA", "Firebase"],
+      "tags": ["家計簿", "PWA"],
+      "github": "",
+      "liveUrl": "",
+      "docUrl": "",
+      "thumbnailUrl": "",
+      "order": 1,
+      "published": true
+    },
+    {
+      "title": "資格取得率改善プレゼン",
+      "category": "資料",
+      "summary": "資格取得率向上のための施策立案と改善提案資料",
+      "description": "社内の資格取得率向上を目的とした課題分析と改善提案をまとめた資料です。",
+      "background": "資格取得率の伸び悩みという課題に対し、データに基づいた改善案を提案しました。",
+      "effort": "現場ヒアリングとデータ分析を組み合わせ、実行可能な施策に落とし込みました。",
+      "techStack": ["PowerPoint", "分析", "改善提案"],
+      "tags": ["資料", "改善提案"],
+      "github": "",
+      "liveUrl": "",
+      "docUrl": "",
+      "thumbnailUrl": "",
+      "order": 2,
+      "published": true
+    },
+    {
+      "title": "防災見守りサービス",
+      "category": "業務改善",
+      "summary": "災害時に家族や地域の安否を確認できる見守りサービスの企画・UI設計",
+      "description": "災害発生時に家族や地域住民の安否を素早く確認できるサービスの企画・UI設計です。",
+      "background": "地域の防災訓練に参加した際、安否確認の手段が乏しいことに課題を感じ企画しました。",
+      "effort": "誰でも直感的に使えるよう、地図ベースのUIとシンプルな操作フローを設計しました。",
+      "techStack": ["企画", "UI/UX", "Figma"],
+      "tags": ["防災", "企画"],
+      "github": "",
+      "liveUrl": "",
+      "docUrl": "",
+      "thumbnailUrl": "",
+      "order": 3,
+      "published": true
+    }
+  ]
+}

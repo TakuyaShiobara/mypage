@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Works | Takaya Shiobara</title>
+<meta name="description" content="Takaya Shiobaraが制作したアプリ・Webサイト・資料・業務改善・AI関連の作品一覧。">
+<link rel="canonical" href="/works.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Works | Takaya Shiobara">
+<meta property="og:description" content="Takaya Shiobaraが制作した作品一覧。">
+<meta property="og:image" content="/assets/images/hero-placeholder.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/tokens.css">
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/components.css">
+<link rel="stylesheet" href="/css/layout.css">
+<link rel="stylesheet" href="/css/pages.css">
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="page-section container">
+    <div class="page-heading">
+      <h1>Works</h1>
+      <p>これまでに制作した作品の一覧です。</p>
+    </div>
+
+    <div class="works-toolbar">
+      <div class="filter-pills" id="category-filters" role="group" aria-label="カテゴリで絞り込み"></div>
+      <div class="search-input-wrap">
+        <label class="visually-hidden" for="tag-search">タグで検索</label>
+        <input type="text" id="tag-search" placeholder="タグで検索(例: Firebase)">
+      </div>
+    </div>
+
+    <div class="work-grid" id="works-list" aria-live="polite">
+      <div class="card"><div class="work-card-thumb skeleton"></div><div class="card-body"><div class="skeleton" style="height:20px;margin-bottom:8px;"></div><div class="skeleton" style="height:14px;width:70%;"></div></div></div>
+      <div class="card"><div class="work-card-thumb skeleton"></div><div class="card-body"><div class="skeleton" style="height:20px;margin-bottom:8px;"></div><div class="skeleton" style="height:14px;width:70%;"></div></div></div>
+      <div class="card"><div class="work-card-thumb skeleton"></div><div class="card-body"><div class="skeleton" style="height:20px;margin-bottom:8px;"></div><div class="skeleton" style="height:14px;width:70%;"></div></div></div>
+      <div class="card"><div class="work-card-thumb skeleton"></div><div class="card-body"><div class="skeleton" style="height:20px;margin-bottom:8px;"></div><div class="skeleton" style="height:14px;width:70%;"></div></div></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script type="module" src="/js/pages/works-list.js"></script>
+</body>
+</html>
