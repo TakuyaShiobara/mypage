@@ -23,6 +23,14 @@ img {
   display: block;
 }
 
+/* Inline utility icons (icon() helper) have no width/height attributes,
+   so without this they render at 0 size in some browsers. */
+svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
