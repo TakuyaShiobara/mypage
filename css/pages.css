@@ -142,13 +142,13 @@
 
 .work-detail-body {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   gap: var(--space-7);
 }
 
 @media (max-width: 860px) {
   .work-detail-body {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
