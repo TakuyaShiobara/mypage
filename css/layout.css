@@ -151,7 +151,10 @@
 
 /* Page section spacing */
 .page-section {
-  padding: var(--space-8) 0;
+  /* padding-top/bottom only (not the shorthand) so this can combine with
+     .container on the same element without clobbering its side padding. */
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
 }
 
 .page-section:first-of-type {
@@ -164,7 +167,9 @@
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
   gap: var(--space-8);
-  padding: var(--space-8) 0;
+  /* padding-top/bottom only — see .page-section comment above. */
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-8);
 }
 
 .hero-eyebrow {
@@ -213,7 +218,8 @@
   .hero {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-6);
-    padding: var(--space-6) 0;
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
   }
 
   .hero-media {
