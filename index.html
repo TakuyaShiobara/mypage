@@ -97,5 +97,31 @@
 
 <div id="site-footer"></div>
 <script type="module" src="/js/pages/home.js"></script>
+<script>
+(function () {
+  var box = document.createElement("div");
+  box.style.cssText = "position:fixed;top:0;left:0;right:0;z-index:99999;background:#000;color:#0f0;font:11px/1.4 monospace;padding:8px;white-space:pre-wrap;";
+  function report() {
+    var hero = document.querySelector(".hero");
+    var media = document.querySelector(".hero-media");
+    var heroCS = hero ? getComputedStyle(hero) : null;
+    var lines = [
+      "innerWidth=" + window.innerWidth + " innerHeight=" + window.innerHeight,
+      "docEl.clientWidth=" + document.documentElement.clientWidth + " scrollWidth=" + document.documentElement.scrollWidth,
+      "body.clientWidth=" + document.body.clientWidth + " scrollWidth=" + document.body.scrollWidth,
+      "devicePixelRatio=" + window.devicePixelRatio,
+      "visualViewport.width=" + (window.visualViewport ? window.visualViewport.width : "n/a") + " scale=" + (window.visualViewport ? window.visualViewport.scale : "n/a"),
+      "hero.offsetWidth=" + (hero ? hero.offsetWidth : "n/a") + " gridTemplateColumns=" + (heroCS ? heroCS.gridTemplateColumns : "n/a"),
+      "heroMedia.offsetWidth=" + (media ? media.offsetWidth : "n/a"),
+      "UA=" + navigator.userAgent.slice(0, 60),
+    ];
+    box.textContent = lines.join("\n");
+  }
+  document.body.prepend(box);
+  report();
+  window.addEventListener("resize", report);
+  setTimeout(report, 1000);
+})();
+</script>
 </body>
 </html>
