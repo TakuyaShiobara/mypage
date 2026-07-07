@@ -21,7 +21,7 @@ export async function renderFooter() {
 
   container.append(
     socialsRow,
-    el("p", { class: "footer-copyright" }, `© ${year} Takaya Shiobara`),
+    el("p", { class: "footer-copyright" }, `© ${year} たきやのIT部屋`),
   );
   footer.append(container);
   mount.append(footer);

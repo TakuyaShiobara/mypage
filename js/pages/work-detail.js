@@ -20,9 +20,9 @@ function renderNotFound(message) {
 }
 
 function setMeta(work) {
-  document.title = `${work.title} | Takaya Shiobara`;
+  document.title = `${work.title} | たきやのIT部屋`;
   qs("#page-description").setAttribute("content", work.summary || "");
-  qs("#og-title").setAttribute("content", `${work.title} | Takaya Shiobara`);
+  qs("#og-title").setAttribute("content", `${work.title} | たきやのIT部屋`);
   qs("#og-description").setAttribute("content", work.summary || "");
   qs("#og-image").setAttribute("content", work.thumbnailUrl || "/assets/images/work-placeholder.svg");
   qs("#canonical-link").setAttribute("href", `/work.html?id=${work.id}`);
@@ -34,7 +34,7 @@ function setMeta(work) {
     "@type": "CreativeWork",
     name: work.title,
     description: work.summary,
-    creator: { "@type": "Person", name: "Takaya Shiobara" },
+    creator: { "@type": "Person", name: "たきやのIT部屋" },
     keywords: (work.tags || []).join(", "),
     url: `/work.html?id=${work.id}`,
     image: work.thumbnailUrl || undefined,

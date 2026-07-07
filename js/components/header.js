@@ -61,7 +61,7 @@ export async function renderHeader(activeKey) {
   const container = el("div", { class: "container" });
 
   container.append(
-    el("a", { href: "/index.html", class: "site-logo" }, "Takaya Shiobara"),
+    el("a", { href: "/index.html", class: "site-logo" }, "たきやのIT部屋"),
     buildNav(activeKey, "main-nav"),
     el("div", { class: "header-socials" }),
     el("button", {

@@ -1,4 +1,4 @@
-# mypage — Takaya Shiobara Portfolio
+# mypage — たきやのIT部屋 Portfolio
 
 Firebase(Firestore / Storage / Authentication / Hosting)を使ったCMS型ポートフォリオサイトです。ビルドツールやフレームワークは使わず、HTML / CSS / JavaScript(ES Modules)のみで構成しています。`/admin` から作品・プロフィール・スキル・SNSリンクを編集できます。
 

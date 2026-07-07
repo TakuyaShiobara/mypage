@@ -8,7 +8,7 @@ import { db } from "../firebase-init.js";
 const PROFILE_DOC = doc(db, "profiles", "main");
 
 export const defaultProfile = {
-  name: "Takaya Shiobara",
+  name: "たきやのIT部屋",
   title: "IT Engineer / AI Developer",
   tagline: "技術で、働き方をもっと自由に。",
   description:
