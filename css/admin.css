@@ -191,19 +191,20 @@
 
 .form-grid-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0 var(--space-4);
 }
 
 @media (max-width: 640px) {
   .form-grid-2 {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 .image-uploader {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--space-4);
 }
 
@@ -282,27 +283,73 @@
   margin-bottom: var(--space-6);
 }
 
+.admin-nav-toggle {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .admin-shell {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .admin-sidebar {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 20;
     background: var(--color-bg);
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    overflow-x: auto;
+    justify-content: space-between;
+    gap: 0;
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .admin-nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text);
+  }
+
+  .admin-nav-toggle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* Collapsed by default; the toggle button adds .is-open on .admin-sidebar. */
+  .admin-nav,
+  .admin-user {
+    display: none;
+    width: 100%;
+    flex: none;
+  }
+
+  .admin-sidebar.is-open .admin-nav,
+  .admin-sidebar.is-open .admin-user {
+    display: flex;
   }
 
   .admin-nav {
-    flex-direction: row;
+    flex-direction: column;
+    order: 3;
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
   }
 
   .admin-user {
-    border-top: none;
-    padding-top: 0;
+    order: 4;
+    margin-top: var(--space-4);
+    padding-top: var(--space-4);
+  }
+
+  .admin-main {
+    padding: var(--space-5);
   }
 }

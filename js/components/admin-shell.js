@@ -1,4 +1,5 @@
 import { el, qs } from "../utils/dom.js";
+import { icon } from "../utils/icons.js";
 import { logout } from "../admin/auth-guard.js";
 
 const NAV_ITEMS = [
@@ -23,8 +24,22 @@ export function renderAdminShell(activeKey, user) {
     );
   });
 
+  const navToggle = el("button", {
+    class: "admin-nav-toggle",
+    type: "button",
+    "aria-expanded": "false",
+    "aria-label": "メニューを開く",
+    html: icon("menu"),
+    onClick: () => {
+      const isOpen = sidebar.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      navToggle.innerHTML = icon(isOpen ? "close" : "menu");
+    },
+  });
+
   const sidebar = el("aside", { class: "admin-sidebar" }, [
     el("a", { href: "/admin/dashboard.html", class: "admin-logo" }, "管理画面"),
+    navToggle,
     nav,
     el("div", { class: "admin-user" }, [
       user.photoURL ? el("img", { src: user.photoURL, alt: "" }) : null,
